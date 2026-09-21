@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 // You can import supported modules from npm
 import { Card } from 'react-native-paper';
@@ -15,6 +15,11 @@ export default function App() {
       
         helloWorld, {fullname}  
       </Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Enter your name"
+        value={fullname}
+        onChangeText={(text) =>setFullname(text)} />
       
     </View>
   );
@@ -29,3 +34,4 @@ fontWeight: 'bold',
 textAlign: 'center',
 },
 });
+
