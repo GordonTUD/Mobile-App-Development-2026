@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 // You can import supported modules from npm
@@ -7,15 +8,18 @@ import { Card } from 'react-native-paper';
 import AssetExample from './components/AssetExample';
 
 export default function App() {
+  const [fullname, setFullname] = useState("Gordon Bruns");
   return (
     <View>
       <Text style={styles.paragraph}>
-        helloWorld
+      
+        helloWorld, {fullname}  
       </Text>
       
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
 paragraph: {
